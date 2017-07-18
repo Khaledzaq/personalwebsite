@@ -1,0 +1,53 @@
+
+body{
+	background-color: grey;
+}
+
+.white{
+	color:white;
+}
+
+h1 {
+	text-align: center;
+}
+
+.nav_bar {
+	width : 500px;
+}
+
+.centre{
+	margin: auto;
+	width : 200px ;
+}
+
+.right{
+	float: right ;
+}
+
+.inline{
+	display: inline-block;
+}
+
+.nav_bar{
+	border:solid black 10px;
+}
+
+a {
+
+	text-decoration: none;
+}
+
+a:hover {
+	color:white;
+}
+
+li:hover {
+	
+	background-color: red; 
+}
+
+li {
+	padding: 20px
+}
+
+
