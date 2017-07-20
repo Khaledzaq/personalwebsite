@@ -1,0 +1,69 @@
+body{
+	background-color: red;
+}
+
+.black{
+	color:black;
+}
+
+h1 {
+	text-align: center;
+}
+
+.nav_bar {
+	width : 500px;
+}
+
+.centre{
+	margin: auto;
+	width : 200px ;
+}
+
+.right{
+	float: right ;
+}
+
+.inline{
+	display: inline-block;
+}
+
+.nav_bar{
+	border:solid black 10px;
+}
+
+a {
+
+	text-decoration: none;
+}
+
+a:hover {
+	color:red;
+}
+
+li:hover {
+	
+	background-color: red; 
+}
+
+li {
+	padding: 20px
+}
+
+h2 {
+	text-align: left;
+	color: lightblue
+}
+
+h2:hover{
+	color: darkblue
+}
+
+.message{
+	width: 200px;
+	height: 200px;
+	font-size:20px;
+}
+
+textarea{
+	resize: none;
+}

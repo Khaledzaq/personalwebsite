@@ -1,5 +1,5 @@
-from flask import Flask, render_template
-import random
+from flask import Flask, render_template , request
+import random 
 app = Flask(__name__)
 
 fortunes = ["You will marry a wealthy person from a foreign land", 
@@ -28,14 +28,32 @@ def randomly ():
 	return render_template("theluckypage.html" ,
 	 luckk= (random.choice(fortunes)  +" " + random.choice(conditions)+ ", your babys name is " + random.choice(names)))
 	
-
-	
-
 @app.route("/contactme")
 def contact ():
 	return render_template("contectme.html",
 		num =str(random.randint(0000000,9999999)))
 
+@app.route("/wecode")
+def wecode ():
+	return render_template("wecode.html")
+
+@app.route("/access")
+def access():
+	return render_template("access.html")
+
+@app.route("/viewthedata", methods= ["POST"])
+def hello ():
+	user_name = request.form["firstname"]
+	user_lastname = request.form["lastname"]
+	user_message = request.form["message"]
+	user_gender = request.form["gender"]
+	return render_template("veiwtheuser.html" ,
+		username= user_name,
+		userlastname=user_lastname,
+		usermessage=user_message,
+		usergender=user_gender
+		) 
+	#+ (user_name + " " + user_lastname + " "+ user_message + " " + user_gender)
 	
 
 
