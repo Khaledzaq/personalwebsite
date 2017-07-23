@@ -3,6 +3,21 @@ body{
 	background-color: grey;
 }
 
+.background_img{
+	color: black;
+	font-size: 10px;
+	float: center;
+	background-image: url("https://pbs.twimg.com/profile_images/850760805574471680/kcyxNgph.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 200px;
+	border:solid black 10px;
+	border-radius: 10%;
+	
+}
+
+
 .white{
 	color:white;
 }
@@ -14,6 +29,11 @@ h1 {
 .nav_bar {
 	width : 500px;
 }
+
+
+
+
+
 
 .centre{
 	margin: auto;

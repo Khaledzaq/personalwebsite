@@ -1,5 +1,19 @@
 from flask import Flask, render_template , request
 import random 
+import dataset
+# db = dataset.connect('postgres://yowahpfaxtsjoc:89e78de430594fa7bffec234ce5bc8ac9193cef0a864378fd900ddd573d65651@ec2-23-23-244-83.compute-1.amazonaws.com:5432/dbn2rcviq5s3i4')
+# info_table = db["userinfo_user"]
+
+# user_table = db["khaledzaq_user"]
+# user_table.insert(dict(name='khaled zaqout' , age= 14 , country= 'palestine'))
+# user_table.insert(dict(name="khaled alhendawi" , age=16 , country='palestine'))
+# user_table.insert(dict(name='hala barka' , age= 35, country='UK'))
+# user_table.insert(dict(name='reana saed' , age= 25, country='USA'))
+# for user in user_table:
+# 	print ("id : " + str(user['id']) + " the name is " + str(user['name']) + " the age is " + str(user['age']) + " the country is " + str(user['country']))
+# 	print (user_table.find_one(name = "khaled zaqout"))
+
+
 app = Flask(__name__)
 
 fortunes = ["You will marry a wealthy person from a foreign land", 
@@ -41,12 +55,19 @@ def wecode ():
 def access():
 	return render_template("access.html")
 
+@app.route("/yes")
+def yes():
+	return render_template("yes.html")
+
 @app.route("/viewthedata", methods= ["POST"])
 def hello ():
 	user_name = request.form["firstname"]
 	user_lastname = request.form["lastname"]
 	user_message = request.form["message"]
 	user_gender = request.form["gender"]
+	# info_table.insert(dict(firname="user_name" , lasname="user_lastname", message="user_message" , gender= "user_info"))
+	# return info_table.find_one(firname="khaled")
+	
 	return render_template("veiwtheuser.html" ,
 		username= user_name,
 		userlastname=user_lastname,
@@ -56,8 +77,14 @@ def hello ():
 	#+ (user_name + " " + user_lastname + " "+ user_message + " " + user_gender)
 	
 
-
 	
 
-if __name__ == "__main__":
+if __name__ == "__main__" :
 	app.run()
+	
+	# for user in info_table :
+	# 	print ("the name is " + str(info_table['firname']) + " "+ str(info_table['lasname']) + "the message is " + str(info_table['message']) + " " + "the gender is " + str(info_table['gender'] )
+	# 	#print (user_table.columns)
+	# 	#print (db.tables) 
+	# 	app.run()
+	# 
